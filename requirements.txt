@@ -1,0 +1,6 @@
+openai
+python-binance
+pandas
+numpy
+requests
+ta
