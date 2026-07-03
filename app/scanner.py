@@ -7,6 +7,7 @@ client = Client(
 )
 
 def get_usdt_symbols():
+
     exchange = client.futures_exchange_info()
 
     symbols = []
@@ -16,19 +17,21 @@ def get_usdt_symbols():
         if item["quoteAsset"] != "USDT":
             continue
 
+        if item["contractType"] != "PERPETUAL":
+            continue
+
         if item["status"] != "TRADING":
             continue
 
         symbols.append(item["symbol"])
 
-    return symbols
+    return sorted(symbols)
 
 
 if __name__ == "__main__":
 
-    usdt = get_usdt_symbols()
+    data = get_usdt_symbols()
 
-    print("USDT 永續數量：", len(usdt))
+    print(f"共有 {len(data)} 個USDT永續")
 
-    print(usdt[:20])
- 
+    print(data[:20])
