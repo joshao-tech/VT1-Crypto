@@ -1,13 +1,9 @@
-import os
+OPENAI_API_KEY = "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"
 
-# OpenAI API
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
+BINANCE_API_KEY = "WbOkSySfCGwW6oU2ttGK7KqZBcQaKnzWnTV1EK47UgB30tX3pTn5lawqY3FIKRCY"
 
-# Binance API
-BINANCE_API_KEY = os.getenv("BINANCE_API_KEY", "")
-BINANCE_SECRET_KEY = os.getenv("BINANCE_SECRET_KEY", "")
+BINANCE_SECRET_KEY = "X6Vj8Jvx9kwFfD7q1RxESJ4RDexR5mhQqXhmmyyPofxyvWe4xM3bIHCnC6NmmdWY"
 
-# Scanner Settings
 TIMEFRAME = "4h"
 EMA_FAST = 20
 EMA_SLOW = 60
